@@ -5,17 +5,20 @@ import 'package:flutter/material.dart';
 // MaterailApp class is Present in the material.dart file
 void main() {
   runApp(
-      MyApp()); // runApp() will prompt flutter to run draw something on the screen and flutter will  call build method and build method will // create the MyApp widget on the screen// build method return new widget which need to be drawn on the screen// since flutter calls build method hence its flutter responsibility to provide the context argument of BuildContext type to it
-}
-
+      MyApp()); 
+    
+  }
+// runApp() will prompt flutter to run and draw something on the screen and flutter will  call build method and build method will // create the MyApp widget on the screen// build method return new widget which need to be drawn on the screen// since flutter calls build method hence its flutter responsibility to provide the context argument of BuildContext type to it
 // Instead of this main method implementation we can this also
-// void main() => runApp(MyApp());                     // This single level implementation in default code shown when you create a new Project
+// void main() => runApp(MyApp());                    
+// This single level implementation comes  default in code shown when you create a new Project since we have created the project from scratch .lets understand this also it means when function has only one instruction to execute we can write it like this
 
-// Each class has to extend atleast statelesswidget or statefull widget
-// decorator is just to make code little clear its not mandiatory but good to add
-  // return MaterialApp(home: Text('Hello!'));
-  // its a Prebuilt widget Present in Material.dart which can be use to create appbar
-// we have created a list questions ofstring type
+// Each class has to extend atleast statelesswidget or statefull widget which are classes which helps in basic ui development
+// 
+// @overide is a decorator it is just use to make code little clear its not mandiatory but good to add
+// return MaterialApp(home: Text('Hello!'));
+// appbar:Appbar() here Appbar is a Prebuilt widget Present in Material.dart which can be use to create appbar
+// we have created a list name questions of string type at line 30
 
 class MyApp extends StatelessWidget {
   void answers() {
@@ -25,15 +28,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var questions = [
-      'What\'s your favourite color?',
+      'What\'s your favourite color?',  // okay you might be thinking what is a need to write a backward slash in 'what\'s because we are writing two single qotes so we dont write in this way string will end here and we cant enter words so by doing this we tell compiler the this quote is a part of word 
       'What\'s your favourite animal'
     ];
     return MaterialApp(
-        home: Scaffold(
+        home: Scaffold(                // scafold is the widget which gives basic ui to your app like blue color to appbar a white screen basucally makes a simple ui for u
       appBar: AppBar(
         title: Text('My First App'),
       ),
-      body: Column(
+      body: Column(                   // since body cant take more then one widget we used a predefined widget called columm which can now hold multiple value in a columm but remember we are passing a columm only which is still a single widget but it can hold multiple values
         children: [
           Text('The question'),
           RaisedButton(
