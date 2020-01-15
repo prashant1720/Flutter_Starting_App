@@ -15,9 +15,9 @@ void main() {
 
 // Each class has to extend atleast statelesswidget or statefull widget which are classes which helps in basic ui development
 // 
-// @overide is a decorator it is just use to make code little clear its not mandiatory but good to add
+//line 27: @overide is a decorator it is just use to make code little clear its not mandiatory but good to add
 // return MaterialApp(home: Text('Hello!'));
-// appbar:Appbar() here Appbar is a Prebuilt widget Present in Material.dart which can be use to create appbar
+// at line 36: appbar:Appbar() here Appbar is a Prebuilt widget Present in Material.dart which can be use to create appbar
 // we have created a list name questions of string type at line 30
 
 class MyApp extends StatelessWidget {
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(                // scafold is the widget which gives basic ui to your app like blue color to appbar a white screen basucally makes a simple ui for u
       appBar: AppBar(
         title: Text('My First App'),
-      ),
+      ),                              // body is the center white screen visible to user
       body: Column(                   // since body cant take more then one widget we used a predefined widget called columm which can now hold multiple value in a columm but remember we are passing a columm only which is still a single widget but it can hold multiple values
         children: [
           Text('The question'),
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           ),
           RaisedButton(                 // On pressed can have two type of function : named function and Anonymous function lets see both of there implementation
             child: Text('Answer 2'),    // *****This is named function use with onPressed****** //
-            onPressed: answers,        // here you might be thinking if i am calling the answer function then why didn't i have written answers() this way because in 
+            onPressed: answers,        // here you might be thinking if i am calling the answer function then why didn't i have written answers(); this way because a 
                                        // dart program is compiled top to down and when the statement is executed function is also called there which we did  not want and which is actually wrong without pressing the button how can that function be called 
                                        // so we make a pointer a kind of refferene by just writing the name but not the function which will in turn call the function when the button is pressed
                                        // onpressed: answers() This means value of onpressed is what answer function returns this is actually return internally as onpressed=answers()
